@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>START EXPLORING!🧡</title>
+    <link rel="stylesheet" href="2-css/style.css">
+
+<style media="screen">
+@import url("http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url(2-background.gif)
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase; /* 大写 */
+  letter-spacing: 2px; /* 字符间距 */
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color: #e73d97;
+}
+
+  .top{
+    text-align: center;
+    width:600px;
+    height:8vh;
+    position:fixed;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+.top .text{
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color:  #e73d97;
+}
+
+.container{
+    margin: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container .card{
+    /* 相对定位 */
+    position: relative;
+    width: 280px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.1);
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .card:hover .content{
+    transform: translateY(0);
+    opacity: 1;
+}
+.container .card .content h2{
+    position: absolute;
+    top: -80px;
+    right: 25px;
+    font-size: 128px;
+    color: rgba(255,255,255,0.05);
+}
+.container .card .content h3{
+    font-size: 28px;
+    color:  #e73d97;
+    margin: 30px;
+}
+.container .card .content p{
+    font-size: 16px;
+    color:  #e73d97;
+    font-weight: 300;
+    margin: 10px 0 15px 0;
+}
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background-color:  #e73d97;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<!--导航-->
+  <header>
+    <a href="index.html" class="logo">WYM</a>
+    <ul>
+      <li><a href="2-1首页-contact me.html" class="active">contact me</a></li>
+    </ul>
+  </header>
+
+
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2>01</h2>
+                <h3>My Childhood</h3>
+                <p>About my childhood experiences and stories.</p>
+                <a href="3-1首页.html">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Exhibition of works</h3>
+                <p>Online small-scale exhibition of works~</p>
+                <a href="3-2首页.html">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>03</h2>
+                <h3>Future Imagination</h3>
+                <p>My future career imagination.</p>
+                <a href="3-3首页.html">Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+<div class="top">
+  <p class="text">If you would like to know more about me, please select the section that interests you.</p>
+</div>
+
+
+    <script src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"),{
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 1
+        })
+    </script>
+
+
+  </body>
+</body>
+
+</html>
